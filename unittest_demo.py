@@ -1,16 +1,9 @@
-import unittest
+# Import the Add function, and assert that it works correctly.
+from main import Add
 
-from M4.numeric_conversion import *
+def TestAdd():
+        assert Add(2,3) == 5
+        print("Add Function works correctly")
 
-
-class NumberTest(unittest.TestCase):
-    def test_hex_string_decode(self):
-        hex_str = "0x2A"
-        # add another test
-        hex_str2 = "3B"
-        expected = 45
-        expected2 = 59
-
-        result = hex_string_decode(hex_str)
-        self.assertEqual(expected, result)
-        self.assertEqual(expected2, hex_string_decode(hex_str2))
+if __name__ == '__main__':
+        TestAdd()
